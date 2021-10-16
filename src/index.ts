@@ -160,7 +160,6 @@ export function localStorage<T>(listenExternalChanges = false): StorageInterface
     if (typeof window !== "undefined" && window?.localStorage) {
         return getBrowserStorage(window.localStorage, listenExternalChanges)
     }
-    console.warn("Unable to find the localStorage. No data will be persisted.")
     return noopStorage()
 }
 
@@ -172,7 +171,6 @@ export function sessionStorage<T>(listenExternalChanges = false): StorageInterfa
     if (typeof window !== "undefined" && window?.sessionStorage) {
         return getBrowserStorage(window.sessionStorage, listenExternalChanges)
     }
-    console.warn("Unable to find the sessionStorage. No data will be persisted.")
     return noopStorage()
 }
 
@@ -181,7 +179,6 @@ export function sessionStorage<T>(listenExternalChanges = false): StorageInterfa
  */
 export function cookieStorage(): StorageInterface<any> {
     if (typeof document === "undefined" || typeof document?.cookie !== "string") {
-        console.warn("Unable to find the cookies. No data will be persisted.")
         return noopStorage()
     }
 
@@ -215,7 +212,6 @@ export function cookieStorage(): StorageInterface<any> {
  */
 export function indexedDBStorage<T>(): SelfUpdateStorageInterface<T> {
     if (typeof indexedDB !== "object" || typeof window === "undefined" || typeof window?.indexedDB !== "object") {
-        console.warn("Unable to find the IndexedDB. No data will be persisted.")
         return noopSelfUpdateStorage()
     }
 
