@@ -1,6 +1,6 @@
 {
   "name": "@macfja/svelte-persistent-store",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "A Svelte store that keep its value through pages and reloads",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
@@ -57,12 +57,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/macfja/svelte-persistent-store.git"
+    "url": "git+https://github.com/boatilus/svelte-persistent-store.git"
   },
   "bugs": {
-    "url": "https://github.com/macfja/svelte-persistent-store/issues"
+    "url": "https://github.com/boatilus/svelte-persistent-store/issues"
   },
-  "homepage": "https://github.com/macfja/svelte-persistent-store#readme",
+  "homepage": "https://github.com/boatilus/svelte-persistent-store#readme",
   "author": "MacFJA",
   "license": "MIT",
   "types": "types/index.d.ts",
